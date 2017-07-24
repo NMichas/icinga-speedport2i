@@ -111,3 +111,11 @@ Upstream_attenuation=$Upstream_attenuation;$upAttenuationW;$upAttenuationC;0"
 
 # Output.
 echo $OUTPUT
+
+# Exit status
+if (( $warning==1 )); then
+  exit 1
+fi
+if (( $critical==1 )); then
+  exit 2
+fi
